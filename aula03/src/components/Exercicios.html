@@ -1,0 +1,82 @@
+import React from 'react'
+import ListaDeLinguagens from './components/ListaDeLinguagens'
+
+
+
+const App = () => {
+  return (
+    <div>
+    {
+      [
+        {linguagem: "C++", dificuldade:"Difícil"},
+        {linguagem: "C#", dificuldade:"Difícil"},
+        {linguagem: "Python", dificuldade:"Difícil"},
+        {linguagem: "JavaScript", dificuldade:"Difícil"},
+        {linguagem: "Java", dificuldade:"IMPOSSÍVEL"}
+
+      ].map((linguagem) =>
+        <ListaDeLinguagens linguagem={linguagem.linguagem} dificuldade={linguagem.dificuldade}/>
+      )
+    } 
+
+    </div>
+  )
+}
+
+export default App
+
+######################################################################################################################
+STATUS ALUNO 
+
+import React from 'react'
+import Aluno from './components/Aluno'
+
+
+
+const App = () => {
+  return (
+    <div>
+    {
+      [
+        {nome: "Dyego ", email:"dyego@gmail.com", curso: "Sistemas para Internet", media: 7.0},
+        {nome: "Pedro ", email:"pedro@gmail.com", curso: "Sistemas para Internet", media: 5.0},
+        {nome: "Davi ", email:"davi@gmail.com", curso: "Sistemas para Internet", media: 8.0},
+
+      ].map((aluno) =>
+        <Aluno nome={aluno.nome} email={aluno.email} curso={aluno.email} media={aluno.media}/>
+      )
+    } 
+
+    </div>
+  )
+}
+
+export default App
+
+######################################################################################################################
+PRODUTOS
+
+import React from 'react'
+import Produto from './components/Produto'
+
+const App = () => {
+  return (
+    <div>
+    {
+      [
+          { nome: "Notebook", preco: 4500, categoria: "Informática", quantidade: 10 },
+          { nome: "Mouse Gamer", preco: 150, categoria: "Acessórios", quantidade: 0 },
+          { nome: "Cadeira Gamer", preco: 1200, categoria: "Móveis", quantidade: 3 },
+        ].map((produto) =>
+          <Produto
+            nome={produto.nome} preco={produto.preco} categoria={produto.categoria} quantidade={produto.quantidade}
+            
+            
+          />
+        )
+      }
+    </div>
+  )
+}
+
+export default App
